@@ -1,0 +1,29 @@
+.affairs {
+    display: grid;
+    grid-template-columns: 150px 120px 50px;
+}
+
+.affairName {
+    margin-left: 10px;
+
+}
+.low{
+    color: chartreuse;
+}
+.middle{
+    color: orange;
+}
+.high{
+    color: red;
+}
+
+.button {
+    margin: 10px;
+    color: greenyellow;
+    background-color: darkolivegreen;
+    width: 60px;
+}
+
+.buttonDel {
+    width: 30px;
+}
