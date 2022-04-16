@@ -1,6 +1,7 @@
-import React, {ChangeEvent, useState} from 'react'
+import React, {ChangeEvent, KeyboardEvent, useState} from 'react'
 import Greeting from './Greeting'
 import {UserType} from "./HW3";
+
 
 type GreetingContainerPropsType = {
     users: UserType[] // need to fix any
@@ -33,6 +34,11 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
         addUserCallback(name)
         setName('')// need to fix
     }
+    const keyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => {
+        if (error === '' && name !== '' && e.charCode === 13) {
+            addUser()
+        }
+    }
 
     const totalUsers = users.length // need to fix
 
@@ -43,6 +49,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
             addUser={addUser}
             error={error}
             totalUsers={totalUsers}
+            keyPress={keyPressHandler}
         />
     )
 }
