@@ -1,7 +1,25 @@
-.someClass {
-
+.greetingClass {
+    margin: 10px;
 }
 
 .error {
-    border: 1px solid red;
+    border: 2px solid red;
+}
+
+.error:focus {
+    border: 2px solid red;
+}
+
+.ok {
+
+}
+
+.button {
+    margin: 10px;
+    color: greenyellow;
+    background-color: darkolivegreen;
+}
+
+.errorMessage {
+    color: red;
 }
