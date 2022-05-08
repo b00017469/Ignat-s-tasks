@@ -1,12 +1,31 @@
-.superInput {
-
-}
-
 .errorInput {
     border: 3px solid lime;
     background: red;
+    outline: none;
+    border-radius: 10px;
 }
 
 .error {
     color: red;
+    height: 21px;
+    margin-left: 10px;
+}
+
+.superInput {
+    outline: none;
+    color: #083a00;
+    background: #111;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: relative;
+    background-size: 400%;
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
 }
