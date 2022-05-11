@@ -1,6 +1,6 @@
 .navdiv {
     position: relative;
-    left: -260px;
+    left: -250px;
     width: 300px;
     height: 50px;
     background: none;
@@ -13,13 +13,19 @@
 }
 
 .navdiv:hover {
-    left: 0px;
+    left: 0;
 }
 
 .link {
-    margin: 10px;
     color: #00ffd5;
-
+    text-decoration: none;
+}
+.link:hover{
+    color: #ff7300;
+}
+.activated{
+    color: greenyellow;
+    text-decoration: none;
 }
 .block{
     background-color: blueviolet;
