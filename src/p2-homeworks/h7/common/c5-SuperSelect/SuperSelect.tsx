@@ -1,4 +1,5 @@
 import React, {SelectHTMLAttributes, DetailedHTMLProps, ChangeEvent} from 'react'
+import s from './SuperSelect.module.css'
 
 type DefaultSelectPropsType = DetailedHTMLProps<SelectHTMLAttributes<HTMLSelectElement>, HTMLSelectElement>
 
@@ -10,12 +11,12 @@ type SuperSelectPropsType = DefaultSelectPropsType & {
 const SuperSelect: React.FC<SuperSelectPropsType> = (
     {
         options,
-        onChange, onChangeOption,
+        onChange, onChangeOption, className,
         ...restProps
     }
 ) => {
     const mappedOptions: any[] = options ? options.map((o, i) => (
-            <option key={i} value={o}>
+            <option className={s.option} key={o + '-' + i} value={o}>
                 {o}
             </option>
         ))
@@ -25,9 +26,10 @@ const SuperSelect: React.FC<SuperSelectPropsType> = (
         onChange && onChange(e)
         onChangeOption && onChangeOption(e.currentTarget.value)
     }
+    const finalSelectClassName = s.select + (className ? ' ' + className : '')
 
     return (
-        <select onChange={onChangeCallback} {...restProps}>
+        <select className={finalSelectClassName} onChange={onChangeCallback} {...restProps}>
             {mappedOptions}
         </select>
     )
