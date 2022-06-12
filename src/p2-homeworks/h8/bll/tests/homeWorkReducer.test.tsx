@@ -1,7 +1,7 @@
-import React from 'react'
 import {homeWorkReducer} from '../homeWorkReducer'
+import {UserType} from "../../HW8";
 
-let initialState: any[] // need to fix any
+let initialState: UserType[]
 
 beforeEach(() => {
     initialState = [
@@ -18,15 +18,21 @@ test('sort name up', () => {
     const newState = homeWorkReducer(initialState, {type: 'sort', payload: 'up'})
 
     console.log(newState)
-    // expect(...).toBe(...)
+    expect(newState[0]._id).toBe(1)
+    expect(newState[5].name).toBe('Кот')
 })
 test('sort name down', () => {
     const newState = homeWorkReducer(initialState, {type: 'sort', payload: 'down'})
 
-
+    console.log(newState)
+    expect(newState[5]._id).toBe(1)
+    expect(newState[0].name).toBe('Кот')
 })
 test('check age 18', () => {
     const newState = homeWorkReducer(initialState, {type: 'check', payload: 18})
 
-
+    console.log(newState)
+    expect(newState.length).toBe(4)
+    expect(newState[0].age).toBe(66)
+    expect(newState[3]._id).toBe(5)
 })
