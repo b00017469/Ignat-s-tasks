@@ -11,7 +11,7 @@ function HW10() {
 
     const setLoading = () => {
         dispatch(loadingAC(true))
-        setTimeout(()=>{
+        setTimeout(() => {
             dispatch(loadingAC(false))
         }, 1000)
     };
@@ -24,7 +24,7 @@ function HW10() {
             {/*should work (должно работать)*/}
             {loading
                 ? (
-                    <div >Loading...</div>
+                    <div>Loading...</div>
                 ) : (
                     <div>
                         <SuperButton onClick={setLoading}>set loading...</SuperButton>
