@@ -3,6 +3,7 @@ import {loadingReducer} from './loadingReducer'
 
  const reducers = combineReducers({
      loading: loadingReducer
+
  })
 
 const store = createStore(reducers)

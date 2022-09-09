@@ -1,9 +1,6 @@
 import React, {useState} from 'react'
 import SuperRange from './common/c7-SuperRange/SuperRange'
 import SuperDoubleRange from './common/c8-SuperDoubleRange/SuperDoubleRange'
-import {
-    AlternativeSuperDoubleRange, OnChangeType
-} from "./common/c8-SuperDoubleRange/AlternativeSuperDoubleRange";
 import style from './HW11.module.css'
 
 
@@ -14,10 +11,10 @@ function HW11() {
         setValue1(value[0])
         setValue2(value[1])
     }
-    const alternativeDoubleChange = ({value1, value2}: OnChangeType) => {
-        setValue1(value1)
-        setValue2(value2)
-    }
+    // const alternativeDoubleChange = ({value1, value2}: OnChangeType) => {
+    //     setValue1(value1)
+    //     setValue2(value2)
+    // }
 
     return (
         <div>
@@ -46,11 +43,11 @@ function HW11() {
             <hr/>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeSuperRange/>*/}
-            <AlternativeSuperDoubleRange value1={value1}
-                                         value2={value2}
-                                         min={0}
-                                         max={100}
-                                         onChange={alternativeDoubleChange}/>
+            {/*<AlternativeSuperDoubleRange value1={value1}*/}
+            {/*                             value2={value2}*/}
+            {/*                             min={0}*/}
+            {/*                             max={100}*/}
+            {/*                             onChange={alternativeDoubleChange}/>*/}
             <hr/>
         </div>
     )
