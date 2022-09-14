@@ -2,12 +2,13 @@ const initState = {
     theme: ''
 };
 
-export const themeReducer = (state = initState, action: ChangeThemeCType): typeof initState=> { // fix any
+export const themeReducer = (state = initState, action: ChangeThemeCType): typeof initState => { // fix any
     switch (action.type) {
         case "CHANGE_THEME": {
             return {...state, theme: action.theme};
         }
-        default: return state;
+        default:
+            return state;
     }
 };
 
